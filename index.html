@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Printer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div id="notToPrint">
+            <h1>Receipt Printer</h1>
+            <form id="receiptForm">
+                <div>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date">
+                </div>
+                <h3>Items</h3>
+                <div style="display: flex; justify-content: center;">
+                    <table id="itemsTable" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="border px-4 py-2">Item Name</th>
+                                <th class="border px-4 py-2">Quantity</th>
+                                <th class="border px-4 py-2">Price</th>
+                                <th class="border px-4 py-2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemsBody">
+                            <!-- Rows will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <button type="button" id="addItem" class="bg-blue-500 text-white p-2 mt-2">Add Item</button>
+                <div>
+                    <label for="total">Total:</label>
+                    <input type="number" id="total" readonly>
+                </div>
+                <button type="submit">Generate Receipt</button>
+            </form>
+        </div>
+
+        <div id="receiptContainer" style="display: none;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h2><strong>Kantin99</strong></h2>
+                <p>Jalan Inspektur Yazid no.64, Lahat, Sumatera Selatan</p>
+                <p>Telp. 081272233039</p>
+                <p><strong>Tanggal:</strong> <span id="receiptDate"></span></p>
+                <div style="display: flex; justify-content: center;">
+                    <table class="receiptTable" style="width: 50%;">
+                        <thead>
+                            <tr>
+                                <th>Barang</th>
+                                <th>Qty</th>
+                                <th>Harga</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="receiptItemsBody">
+                            <!-- Rows will be inserted here by JavaScript -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" style="text-align: end;">
+                                    <div style="padding-inline: 10px;"><strong>Total:</strong></div>
+                                </td>
+                                <td id="receiptTotal" style="text-align: end;"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="mt-4">
+                    <p><strong>Terimakasih</strong></p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
