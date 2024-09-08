@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/WebReceiptPrinter/static/css/main.b120a3c7.css",
+    "main.js": "/WebReceiptPrinter/static/js/main.aea85f1c.js",
+    "static/js/453.c5eaf93b.chunk.js": "/WebReceiptPrinter/static/js/453.c5eaf93b.chunk.js",
+    "index.html": "/WebReceiptPrinter/index.html",
+    "main.b120a3c7.css.map": "/WebReceiptPrinter/static/css/main.b120a3c7.css.map",
+    "main.aea85f1c.js.map": "/WebReceiptPrinter/static/js/main.aea85f1c.js.map",
+    "453.c5eaf93b.chunk.js.map": "/WebReceiptPrinter/static/js/453.c5eaf93b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b120a3c7.css",
+    "static/js/main.aea85f1c.js"
+  ]
+}
