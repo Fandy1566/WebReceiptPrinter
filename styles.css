@@ -97,7 +97,6 @@ button:focus-visible {
     #receiptContainer {
       visibility: visible;
       position: absolute;
-      left: 0;
       top: 0;
     }
   }
