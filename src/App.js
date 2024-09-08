@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -11,14 +11,14 @@ function App() {
     setDate(today);
   }, []);
 
-  const handleItemChange = (index: number, field: string, value: string | number) => {
+  const handleItemChange = (index, field, value) => {
     const newItems = [...items];
     newItems[index] = { ...newItems[index], [field]: value };
     setItems(newItems);
     updateTotal(newItems);
   };
 
-  const updateTotal = (items: { quantity: number; price: number }[]) => {
+  const updateTotal = (items) => {
     const newTotal = items.reduce((sum, item) => sum + item.quantity * item.price, 0);
     setTotal(newTotal);
   };
@@ -27,13 +27,13 @@ function App() {
     setItems([...items, { name: '', quantity: 0, price: 0 }]);
   };
 
-  const handleRemoveItem = (index: number) => {
+  const handleRemoveItem = (index) => {
     const newItems = items.filter((_, i) => i !== index);
     setItems(newItems);
     updateTotal(newItems);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const receiptData = { date, items, total };
 
@@ -58,7 +58,7 @@ function App() {
 
         <h3>Items</h3>
         <div style={{display: 'flex', justifyContent:'center'}}>
-            <table >
+            <table>
             <thead>
                 <tr>
                 <th className="border px-4 py-2">Item Name</th>
